@@ -1,0 +1,1977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SugarGreen | Home - Nature's Sweetness, Delivered</title>
+  
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --primary: #2e7d32;
+      --primary-dark: #1b5e20;
+      --primary-light: #66bb6a;
+      --accent-gold: #f59e0b;
+      --accent-gold-dark: #d97706;
+      --bg-cream: #f9fff9;
+      --bg-card: #ffffff;
+      --border-color: #a5d6a7;
+      --text-dark: #1f3a1f;
+      --text-muted: #4e6b4e;
+      --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.06);
+      --shadow-md: 0 8px 24px rgba(46, 125, 50, 0.12);
+      --shadow-lg: 0 16px 36px rgba(46, 125, 50, 0.16);
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: #f9fff9;
+      color: #2e7d32;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    /* Professional Top Announcement Bar */
+    .top-announcement-bar {
+      background: linear-gradient(90deg, #1b5e20 0%, #2e7d32 100%);
+      color: #ffffff;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 13px;
+      padding: 8px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      z-index: 101;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .top-announcement-bar .announcement-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .top-announcement-bar .badge-offer {
+      background: #f59e0b;
+      color: #1a331a;
+      font-weight: 700;
+      font-size: 11px;
+      padding: 3px 9px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .top-announcement-bar .announcement-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .top-announcement-bar a {
+      color: #e8f5e9;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .top-announcement-bar a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    /* Existing Header & Navigation Upgrades */
+    header {
+      background: #a5d6a7;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(8px);
+    }
+
+    .logo {
+      font-family: 'Pacifico', cursive;
+      font-size: 26px;
+      color: #2e7d32;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #2e7d32;
+      transition: color 0.3s ease;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 15px;
+      position: relative;
+      padding: 4px 0;
+    }
+
+    nav ul li a:hover {
+      color: #1b5e20;
+    }
+
+    nav ul li a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #1b5e20;
+      transition: width 0.3s ease;
+    }
+
+    nav ul li a:hover::after {
+      width: 100%;
+    }
+
+    /* Additional Professional Nav Chips */
+    .header-nav-chips {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-chip {
+      text-decoration: none;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 20px;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-chip-store {
+      background: #388e3c;
+      color: white;
+      box-shadow: 0 2px 8px rgba(46, 125, 50, 0.2);
+    }
+
+    .nav-chip-store:hover {
+      background: #1b5e20;
+      transform: translateY(-2px);
+    }
+
+    .nav-chip-farmer {
+      background: transparent;
+      color: #1b5e20;
+      border: 1.5px solid #2e7d32;
+    }
+
+    .nav-chip-farmer:hover {
+      background: #2e7d32;
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    .mobile-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 22px;
+      color: #2e7d32;
+      cursor: pointer;
+    }
+
+    /* Existing Hero Section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 20px 100px;
+      background-color: #f9fff9;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-grid {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .hero-image img {
+      width: 300px;
+      height: 380px;
+      object-fit: cover;
+      border-radius: 16px;
+      border: 2px solid #66bb6a;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+      transition: transform 0.4s ease;
+    }
+
+    .hero-image img:hover {
+      transform: scale(1.03);
+    }
+
+    .hero-text {
+      width: 420px;
+      background-color: #ffffff;
+      border: 2px solid #66bb6a;
+      border-radius: 16px;
+      padding: 50px 40px;
+      box-shadow: 0 8px 26px rgba(0, 128, 0, 0.12);
+      text-align: center;
+    }
+
+    .hero-text h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #2e7d32;
+      line-height: 1.3;
+    }
+
+    .hero-text p {
+      font-size: 16px;
+      color: #2e7d32;
+      margin-bottom: 25px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      line-height: 1.6;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .btn {
+      background-color: #388e3c;
+      color: white;
+      padding: 12px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 600;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background-color: #2e7d32;
+      transform: scale(1.03);
+    }
+
+    .hero-trust-row {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 22px;
+      padding-top: 18px;
+      border-top: 1px dashed #c8e6c9;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 12px;
+      color: #388e3c;
+      font-weight: 600;
+      flex-wrap: wrap;
+    }
+
+    .hero-trust-row span {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    /* Live Trust & Stats Bar */
+    .stats-bar-section {
+      position: relative;
+      z-index: 3;
+      max-width: 1120px;
+      margin: -60px auto 40px;
+      padding: 0 20px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      background: #ffffff;
+      border: 2px solid #a5d6a7;
+      border-radius: 16px;
+      padding: 30px 25px;
+      box-shadow: 0 10px 30px rgba(46, 125, 50, 0.1);
+    }
+
+    .stat-card {
+      text-align: center;
+      padding: 10px;
+      border-right: 1px solid #e8f5e9;
+    }
+
+    .stat-card:last-child {
+      border-right: none;
+    }
+
+    .stat-icon {
+      font-size: 28px;
+      color: #388e3c;
+      margin-bottom: 8px;
+    }
+
+    .stat-number {
+      font-size: 32px;
+      font-weight: 700;
+      color: #1b5e20;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      margin-bottom: 4px;
+    }
+
+    .stat-label {
+      font-size: 13px;
+      color: #4e6b4e;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 500;
+    }
+
+    /* Section Global Headers */
+    .section {
+      padding: 80px 20px;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .section-badge-tag {
+      display: inline-block;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      background: #e8f5e9;
+      color: #2e7d32;
+      padding: 6px 14px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+      border: 1px solid #c8e6c9;
+    }
+
+    .section-title {
+      font-size: 34px;
+      color: #2e7d32;
+      margin-bottom: 14px;
+    }
+
+    .section-subtitle {
+      font-size: 16px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: #4e6b4e;
+      max-width: 650px;
+      margin: 0 auto 40px;
+      line-height: 1.6;
+    }
+
+    /* Featured Products Showcase */
+    .products-section {
+      background-color: #f4fbf4;
+      border-top: 1px solid #e0f2e1;
+      border-bottom: 1px solid #e0f2e1;
+      padding: 80px 20px;
+    }
+
+    .product-filter-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 35px;
+      flex-wrap: wrap;
+    }
+
+    .filter-tab {
+      background: #ffffff;
+      border: 1.5px solid #c8e6c9;
+      color: #2e7d32;
+      padding: 8px 18px;
+      border-radius: 30px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .filter-tab.active, .filter-tab:hover {
+      background: #388e3c;
+      color: #ffffff;
+      border-color: #388e3c;
+      box-shadow: 0 4px 12px rgba(56, 142, 60, 0.25);
+    }
+
+    .product-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 25px;
+      max-width: 1160px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .pro-product-card {
+      background: #ffffff;
+      border: 1.5px solid #d0ebd0;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .pro-product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-md);
+      border-color: #81c784;
+    }
+
+    .product-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: #388e3c;
+      color: white;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+      z-index: 3;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .product-badge.gold {
+      background: #f59e0b;
+      color: #1a331a;
+    }
+
+    .product-img-wrapper {
+      position: relative;
+      height: 190px;
+      background: #f0f7f0;
+      overflow: hidden;
+    }
+
+    .product-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .pro-product-card:hover .product-img-wrapper img {
+      transform: scale(1.08);
+    }
+
+    .product-body {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .product-rating {
+      color: #f59e0b;
+      font-size: 13px;
+      margin-bottom: 6px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .product-rating span {
+      color: #666;
+      font-size: 12px;
+      margin-left: 4px;
+    }
+
+    .pro-product-card h3 {
+      font-size: 19px;
+      color: #1b5e20;
+      margin-bottom: 8px;
+    }
+
+    .product-desc {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 13px;
+      color: #4e6b4e;
+      line-height: 1.5;
+      margin-bottom: 15px;
+      flex-grow: 1;
+    }
+
+    .product-price-row {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 16px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .current-price {
+      font-size: 20px;
+      font-weight: 700;
+      color: #2e7d32;
+    }
+
+    .old-price {
+      font-size: 14px;
+      color: #888;
+      text-decoration: line-through;
+    }
+
+    .discount-tag {
+      font-size: 11px;
+      font-weight: 700;
+      color: #e65100;
+      background: #fff3e0;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    .product-card-actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn-buy-now {
+      flex: 1;
+      background: #388e3c;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      transition: var(--transition);
+      display: inline-block;
+    }
+
+    .btn-buy-now:hover {
+      background: #2e7d32;
+    }
+
+    .btn-add-cart {
+      background: #e8f5e9;
+      color: #2e7d32;
+      border: 1.5px solid #a5d6a7;
+      border-radius: 8px;
+      padding: 10px 14px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: var(--transition);
+    }
+
+    .btn-add-cart:hover {
+      background: #2e7d32;
+      color: white;
+      border-color: #2e7d32;
+    }
+
+    /* Process Stepper Section */
+    .process-section {
+      padding: 80px 20px;
+      background-color: #ffffff;
+      position: relative;
+      z-index: 2;
+    }
+
+    .stepper-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 25px;
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    .step-card {
+      background: #f9fff9;
+      border: 1.5px solid #c8e6c9;
+      border-radius: 14px;
+      padding: 30px 22px;
+      text-align: center;
+      position: relative;
+      transition: var(--transition);
+    }
+
+    .step-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 24px rgba(46, 125, 50, 0.1);
+      border-color: #66bb6a;
+    }
+
+    .step-number {
+      width: 44px;
+      height: 44px;
+      background: #2e7d32;
+      color: white;
+      font-weight: 700;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 16px;
+      box-shadow: 0 4px 10px rgba(46, 125, 50, 0.25);
+    }
+
+    .step-icon {
+      font-size: 32px;
+      color: #388e3c;
+      margin-bottom: 14px;
+    }
+
+    .step-card h3 {
+      font-size: 18px;
+      color: #1b5e20;
+      margin-bottom: 10px;
+    }
+
+    .step-card p {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 13px;
+      color: #4e6b4e;
+      line-height: 1.6;
+    }
+
+    /* Comparison Section */
+    .comparison-section {
+      padding: 80px 20px;
+      background-color: #f1fdf1;
+      position: relative;
+      z-index: 2;
+    }
+
+    .comparison-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 16px;
+      border: 2px solid #a5d6a7;
+      overflow: hidden;
+      box-shadow: 0 8px 26px rgba(0, 0, 0, 0.05);
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      text-align: left;
+    }
+
+    .comparison-table th {
+      background: #e8f5e9;
+      color: #1b5e20;
+      padding: 16px 20px;
+      font-size: 15px;
+      font-weight: 700;
+      border-bottom: 2px solid #a5d6a7;
+    }
+
+    .comparison-table td {
+      padding: 16px 20px;
+      border-bottom: 1px solid #e8f5e9;
+      font-size: 14px;
+    }
+
+    .comparison-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .comparison-table .highlight-green {
+      color: #2e7d32;
+      font-weight: 600;
+      background-color: #f6fcf6;
+    }
+
+    .comparison-table .highlight-red {
+      color: #b71c1c;
+    }
+
+    /* Existing About Box */
+    .about-box {
+      background-color: #f1fdf1;
+      border: 2px solid #a5d6a7;
+      margin: 60px auto;
+      border-radius: 14px;
+      max-width: 1000px;
+      padding: 50px 40px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+    }
+
+    .about-box h2 {
+      font-size: 34px;
+      margin-bottom: 20px;
+    }
+
+    .about-box p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      max-width: 800px;
+      margin-inline: auto;
+      line-height: 1.6;
+    }
+
+    .about-columns {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      text-align: left;
+      margin-top: 20px;
+    }
+
+    .about-columns div {
+      padding: 16px 22px;
+      border-left: 5px solid #66bb6a;
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    }
+
+    .about-columns h3 {
+      margin-bottom: 8px;
+      font-size: 20px;
+      color: #2e7d32;
+    }
+
+    .about-columns p {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 15px;
+      color: #388e3c;
+      margin-bottom: 0;
+    }
+
+    /* Existing Features Section */
+    .features-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .feature-box {
+      background-color: #f1fdf1;
+      border-left: 6px solid #66bb6a;
+      padding: 20px 30px;
+      width: 90%;
+      max-width: 600px;
+      font-size: 18px;
+      color: #2e7d32;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .feature-box:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Testimonials Section */
+    .testimonials-section {
+      padding: 80px 20px;
+      background-color: #ffffff;
+      position: relative;
+      z-index: 2;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      max-width: 1080px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .testimonial-card {
+      background: #f9fff9;
+      border: 1.5px solid #c8e6c9;
+      border-radius: 14px;
+      padding: 28px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition);
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+      border-color: #81c784;
+    }
+
+    .testi-stars {
+      color: #f59e0b;
+      font-size: 15px;
+      margin-bottom: 12px;
+    }
+
+    .testi-quote {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 14px;
+      color: #334d33;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    .testi-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .testi-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #66bb6a;
+    }
+
+    .testi-author-info h4 {
+      font-size: 15px;
+      color: #1b5e20;
+      margin-bottom: 2px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .testi-author-info p {
+      font-size: 12px;
+      color: #66bb6a;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      margin-bottom: 0;
+    }
+
+    /* FAQ Section */
+    .faq-section {
+      padding: 80px 20px;
+      background-color: #f6fcf6;
+      position: relative;
+      z-index: 2;
+    }
+
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .faq-item {
+      background: #ffffff;
+      border: 1.5px solid #c8e6c9;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+
+    .faq-question {
+      padding: 18px 22px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: #1b5e20;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .faq-question:hover {
+      background: #f0fbf0;
+    }
+
+    .faq-icon {
+      font-size: 16px;
+      color: #388e3c;
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.active .faq-icon {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease-out;
+      padding: 0 22px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 14px;
+      color: #4e6b4e;
+      line-height: 1.6;
+    }
+
+    .faq-item.active .faq-answer {
+      padding-bottom: 18px;
+    }
+
+    /* Newsletter Section */
+    .newsletter-section {
+      padding: 70px 20px;
+      background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
+      color: white;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .newsletter-box {
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    .newsletter-box h2 {
+      font-size: 30px;
+      color: #ffffff;
+      margin-bottom: 12px;
+    }
+
+    .newsletter-box p {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 15px;
+      color: #c8e6c9;
+      margin-bottom: 25px;
+      line-height: 1.5;
+    }
+
+    .newsletter-form {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .newsletter-form input {
+      flex: 1;
+      padding: 14px 18px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      outline: none;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 14px;
+    }
+
+    .newsletter-form button {
+      background: #f59e0b;
+      color: #1a331a;
+      border: none;
+      padding: 14px 24px;
+      border-radius: 8px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .newsletter-form button:hover {
+      background: #d97706;
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    /* Pre-Footer Section (Enriching the footer) */
+    .pre-footer {
+      background-color: #e8f5e9;
+      color: #1b5e20;
+      padding: 60px 20px 40px;
+      position: relative;
+      z-index: 2;
+      border-top: 2px solid #a5d6a7;
+    }
+
+    .pre-footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 35px;
+      max-width: 1120px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .footer-col h4 {
+      font-size: 18px;
+      margin-bottom: 18px;
+      color: #1b5e20;
+    }
+
+    .footer-col p {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 14px;
+      color: #388e3c;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links a {
+      color: #2e7d32;
+      text-decoration: none;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: #1b5e20;
+      text-decoration: underline;
+    }
+
+    .footer-social-icons {
+      display: flex;
+      gap: 12px;
+      margin-top: 15px;
+    }
+
+    .footer-social-icons a {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #a5d6a7;
+      color: #1b5e20;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .footer-social-icons a:hover {
+      background: #2e7d32;
+      color: white;
+      transform: translateY(-3px);
+    }
+
+    .trust-badges-strip {
+      max-width: 1120px;
+      margin: 35px auto 0;
+      padding-top: 25px;
+      border-top: 1px solid #c8e6c9;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 15px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      color: #2e7d32;
+    }
+
+    .trust-badges-strip span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Existing Footer styling */
+    footer {
+      background-color: #a5d6a7;
+      color: #1b5e20;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 14px;
+      position: relative;
+      z-index: 2;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      line-height: 1.8;
+    }
+
+    /* Floating Utilities */
+    .floating-whatsapp {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      width: 54px;
+      height: 54px;
+      background: #25d366;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      box-shadow: 0 6px 18px rgba(37, 211, 102, 0.4);
+      z-index: 999;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .floating-whatsapp:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.5);
+    }
+
+    .back-to-top {
+      position: fixed;
+      bottom: 90px;
+      right: 27px;
+      width: 48px;
+      height: 48px;
+      background: #2e7d32;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      z-index: 998;
+      border: none;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+    }
+
+    .back-to-top.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-to-top:hover {
+      background: #1b5e20;
+      transform: translateY(-3px);
+    }
+
+    /* Interactive Toast Message */
+    .toast-msg {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: #1b5e20;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      opacity: 0;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .toast-msg.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    /* Existing Leaves Background */
+    .falling-leaves {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .leaf {
+      position: absolute;
+      top: -60px;
+      width: 40px;
+      height: 40px;
+      background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6Kmm8Z3QfkD2kCERdedXxUjS81vV4dNJUTw&s');
+      background-size: contain;
+      background-repeat: no-repeat;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-60px) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0.7;
+      }
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 900px) {
+      .top-announcement-bar .announcement-right {
+        display: none;
+      }
+      .mobile-toggle {
+        display: block;
+      }
+      .nav-wrapper {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #a5d6a7;
+        padding: 20px;
+        flex-direction: column;
+        display: none;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      }
+      .nav-wrapper.open {
+        display: flex;
+      }
+      nav ul {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+      }
+      .header-nav-chips {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+      }
+      .header-nav-chips a {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-grid {
+        flex-direction: column;
+      }
+      .hero-text {
+        width: 100%;
+        max-width: 420px;
+      }
+      .about-columns {
+        flex-direction: column;
+      }
+      .newsletter-form {
+        flex-direction: column;
+      }
+      .stat-card {
+        border-right: none;
+        border-bottom: 1px solid #e8f5e9;
+        padding-bottom: 15px;
+      }
+      .stats-bar-section {
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Falling Leaves -->
+<div class="falling-leaves"></div>
+
+<!-- Top Professional Announcement Bar -->
+<div class="top-announcement-bar">
+  <div class="announcement-left">
+    <span class="badge-offer">Harvest Offer</span>
+    <span>🌱 100% Organic Farm-Fresh Sweeteners • Flat 20% OFF Jaggery & Syrups with code <strong>"SUGARGREEN20"</strong></span>
+  </div>
+  <div class="announcement-right">
+    <span><i class="fas fa-truck"></i> Free Shipping on ₹499+</span>
+    <span><i class="fas fa-map-marker-alt"></i> Kunigal, Karnataka</span>
+    <a href="tel:+919113963499"><i class="fas fa-phone"></i> +91 9113963499</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header>
+  <a href="#hero" class="logo">🌿 SugarGreen</a>
+  
+  <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <div class="nav-wrapper" id="navWrapper">
+    <nav>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+      </ul>
+    </nav>
+    <div class="header-nav-chips">
+      <a href="consumer.html" class="nav-chip nav-chip-store"><i class="fas fa-shopping-basket"></i> Shop Market</a>
+      <a href="seller.html" class="nav-chip nav-chip-farmer"><i class="fas fa-tractor"></i> Farmer Portal</a>
+    </div>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero" id="hero">
+  <div class="hero-grid">
+    <div class="hero-image" data-aos="fade-right">
+      <img src="sugarcane1.jpeg" alt="left image" />
+    </div>
+    <div class="hero-text" data-aos="zoom-in">
+      <h1>Nature’s Sweetness, Delivered</h1>
+      <p>Empowering communities through sustainable sugarcane farming and digital innovation.</p>
+      <div class="btn-group">
+        <a href="register.html" class="btn">Register</a>
+        <a href="login.html" class="btn">Login</a>
+      </div>
+      <!-- Trust elements inside hero -->
+      <div class="hero-trust-row">
+        <span><i class="fas fa-seedling"></i> 100% Organic</span>
+        <span><i class="fas fa-shield-alt"></i> Zero Sulfur</span>
+        <span><i class="fas fa-truck-fast"></i> 24h Farm Dispatch</span>
+      </div>
+    </div>
+    <div class="hero-image" data-aos="fade-left">
+      <img src="sugarcane2.jpeg" alt="right image" />
+    </div>
+  </div>
+</section>
+
+<!-- Live Impact & Metrics Counter Strip -->
+<div class="stats-bar-section" data-aos="fade-up">
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-icon"><i class="fas fa-users"></i></div>
+      <div class="stat-number">2,450+</div>
+      <div class="stat-label">Local Farmers Empowered</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon"><i class="fas fa-box-open"></i></div>
+      <div class="stat-number">52,000+</div>
+      <div class="stat-label">Farm-Fresh Orders Shipped</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon"><i class="fas fa-flask"></i></div>
+      <div class="stat-number">100%</div>
+      <div class="stat-label">Chemical-Free Certified Purity</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon"><i class="fas fa-star"></i></div>
+      <div class="stat-number">4.95 / 5</div>
+      <div class="stat-label">Verified Consumer Satisfaction</div>
+    </div>
+  </div>
+</div>
+
+<!-- Featured Products Showcase Section -->
+<section class="products-section" id="products">
+  <div class="section-badge-tag">Farm-To-Table Marketplace</div>
+  <h2 class="section-title" data-aos="fade-up">Pure Sugarcane Sweeteners</h2>
+  <p class="section-subtitle" data-aos="fade-up">Traditional zero-chemical processing meets certified hygiene standards. Delicious, natural, and rich in essential minerals.</p>
+
+  <div class="product-filter-tabs" data-aos="fade-up">
+    <button class="filter-tab active" onclick="filterProducts('all', this)">All Products</button>
+    <button class="filter-tab" onclick="filterProducts('sweeteners', this)">Sweeteners & Cubes</button>
+    <button class="filter-tab" onclick="filterProducts('syrups', this)">Syrup & Molasses</button>
+    <button class="filter-tab" onclick="filterProducts('farm', this)">Raw Farm Fresh</button>
+  </div>
+
+  <div class="product-cards-grid">
+    
+    <!-- Product 1: Sugar Cubes -->
+    <div class="pro-product-card" data-category="sweeteners" data-aos="fade-up" data-aos-delay="100">
+      <span class="product-badge">Best Seller</span>
+      <div class="product-img-wrapper">
+        <img src="sugarcubes.jpeg" alt="Sugar Cubes" />
+      </div>
+      <div class="product-body">
+        <div class="product-rating">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+          <span>(420 reviews)</span>
+        </div>
+        <h3>Organic Sugar Cubes</h3>
+        <p class="product-desc">100% unbleached sugarcane crystals. Melts easily into tea, coffee, and gourmet baking with natural sweetness.</p>
+        <div class="product-price-row">
+          <span class="current-price">₹50 / kg</span>
+          <span class="old-price">₹65</span>
+          <span class="discount-tag">23% OFF</span>
+        </div>
+        <div class="product-card-actions">
+          <a href="sugarcubes.html" class="btn-buy-now">Buy Now</a>
+          <button class="btn-add-cart" onclick="addToCart('Organic Sugar Cubes')" title="Add to Cart"><i class="fas fa-cart-plus"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 2: Jaggery -->
+    <div class="pro-product-card" data-category="sweeteners" data-aos="fade-up" data-aos-delay="200">
+      <span class="product-badge gold">Immunity Rich</span>
+      <div class="product-img-wrapper">
+        <img src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?auto=format&fit=crop&w=600&q=80" alt="Pure Jaggery" />
+      </div>
+      <div class="product-body">
+        <div class="product-rating">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          <span>(680 reviews)</span>
+        </div>
+        <h3>Traditional Desi Jaggery</h3>
+        <p class="product-desc">Natural Gur slow-boiled in stainless open pans. Rich in iron, magnesium, and digestive enzymes. Zero sulfur.</p>
+        <div class="product-price-row">
+          <span class="current-price">₹40 / kg</span>
+          <span class="old-price">₹55</span>
+          <span class="discount-tag">27% OFF</span>
+        </div>
+        <div class="product-card-actions">
+          <a href="jaggery.html" class="btn-buy-now">Buy Now</a>
+          <button class="btn-add-cart" onclick="addToCart('Traditional Desi Jaggery')" title="Add to Cart"><i class="fas fa-cart-plus"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 3: Molasses -->
+    <div class="pro-product-card" data-category="syrups" data-aos="fade-up" data-aos-delay="300">
+      <span class="product-badge">Nutrient Dense</span>
+      <div class="product-img-wrapper">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm_Lm-Fmk0n6Qg_bMXhPGDY0PCtp0THTlNAA&s" alt="Organic Molasses" />
+      </div>
+      <div class="product-body">
+        <div class="product-rating">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          <span>(210 reviews)</span>
+        </div>
+        <h3>Farm-Fresh Molasses</h3>
+        <p class="product-desc">Pure blackstrap cane extract. Unrivaled source of plant-based iron and calcium for culinary marinades and health tonics.</p>
+        <div class="product-price-row">
+          <span class="current-price">₹30 / kg</span>
+          <span class="old-price">₹45</span>
+          <span class="discount-tag">33% OFF</span>
+        </div>
+        <div class="product-card-actions">
+          <a href="molasses.html" class="btn-buy-now">Buy Now</a>
+          <button class="btn-add-cart" onclick="addToCart('Farm-Fresh Molasses')" title="Add to Cart"><i class="fas fa-cart-plus"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 4: Sugarcane Syrup -->
+    <div class="pro-product-card" data-category="syrups" data-aos="fade-up" data-aos-delay="400">
+      <span class="product-badge gold">Cold Pressed</span>
+      <div class="product-img-wrapper">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRchfQBE3W1CwVD17lFi9Olan-NQPBAcsWnuQ&s" alt="Sugarcane Syrup" />
+      </div>
+      <div class="product-body">
+        <div class="product-rating">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+          <span>(350 reviews)</span>
+        </div>
+        <h3>Golden Sugarcane Syrup</h3>
+        <p class="product-desc">Silky, golden syrup extracted from freshly crushed stalks. Drizzle over waffles, desserts, and revitalizing juices.</p>
+        <div class="product-price-row">
+          <span class="current-price">₹60 / kg</span>
+          <span class="old-price">₹80</span>
+          <span class="discount-tag">25% OFF</span>
+        </div>
+        <div class="product-card-actions">
+          <a href="syrup.html" class="btn-buy-now">Buy Now</a>
+          <button class="btn-add-cart" onclick="addToCart('Golden Sugarcane Syrup')" title="Add to Cart"><i class="fas fa-cart-plus"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 5: Raw Sugarcane Bundle -->
+    <div class="pro-product-card" data-category="farm" data-aos="fade-up" data-aos-delay="500">
+      <span class="product-badge">Kunigal Harvest</span>
+      <div class="product-img-wrapper">
+        <img src="sugarcane1.jpeg" alt="Raw Sugarcane" />
+      </div>
+      <div class="product-body">
+        <div class="product-rating">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          <span>(190 reviews)</span>
+        </div>
+        <h3>Fresh Organic Sugarcane Stalks</h3>
+        <p class="product-desc">Juicy, sweet, naturally grown sugarcane stalks harvested fresh from partner farms in Kunigal and Tumkur.</p>
+        <div class="product-price-row">
+          <span class="current-price">₹35 / stalk</span>
+          <span class="old-price">₹45</span>
+          <span class="discount-tag">22% OFF</span>
+        </div>
+        <div class="product-card-actions">
+          <a href="consumer.html" class="btn-buy-now">View in Store</a>
+          <button class="btn-add-cart" onclick="addToCart('Fresh Sugarcane Stalks')" title="Add to Cart"><i class="fas fa-cart-plus"></i></button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Interactive Farm-to-Table Stepper Process -->
+<section class="process-section" id="process">
+  <div class="section-badge-tag">Farm-To-Table Journey</div>
+  <h2 class="section-title" data-aos="fade-up">How SugarGreen Reaches You</h2>
+  <p class="section-subtitle" data-aos="fade-up">Complete transparency at every step: from natural soil nourishment to eco-friendly doorstep delivery.</p>
+
+  <div class="stepper-grid">
+    <div class="step-card" data-aos="fade-up" data-aos-delay="100">
+      <div class="step-number">01</div>
+      <div class="step-icon"><i class="fas fa-tractor"></i></div>
+      <h3>Ethical Cultivation</h3>
+      <p>Harvested by local Karnataka farmers using natural bio-fertilizers and drip-irrigation without harmful chemical pesticides.</p>
+    </div>
+
+    <div class="step-card" data-aos="fade-up" data-aos-delay="200">
+      <div class="step-number">02</div>
+      <div class="step-icon"><i class="fas fa-microscope"></i></div>
+      <h3>Purity & Brix Testing</h3>
+      <p>Every batch undergoes strict sugar-brix testing (18-20% natural sweetness) and lab analysis to guarantee zero chemical residues.</p>
+    </div>
+
+    <div class="step-card" data-aos="fade-up" data-aos-delay="300">
+      <div class="step-number">03</div>
+      <div class="step-icon"><i class="fas fa-fire-burner"></i></div>
+      <h3>Traditional Clarification</h3>
+      <p>Slowly boiled in stainless-steel pans using organic okra mucilage for natural clarification. No sulfur dioxide bleaching.</p>
+    </div>
+
+    <div class="step-card" data-aos="fade-up" data-aos-delay="400">
+      <div class="step-number">04</div>
+      <div class="step-icon"><i class="fas fa-truck-ramp-box"></i></div>
+      <h3>Eco-Sealed Delivery</h3>
+      <p>Hermetically sealed in biodegradable moisture-lock packs and dispatched directly to your home within 24 to 48 hours.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Comparison Matrix: SugarGreen vs Industrial Sugar -->
+<section class="comparison-section">
+  <div class="section-badge-tag">Health & Transparency</div>
+  <h2 class="section-title" data-aos="fade-up">Why SugarGreen Over Refined Sugar?</h2>
+  <p class="section-subtitle" data-aos="fade-up">See the honest difference between our unrefined farm sweetness and supermarket refined sugar.</p>
+
+  <div class="comparison-wrapper" data-aos="zoom-in">
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th>Quality Factor</th>
+          <th style="background:#c8e6c9; color:#1b5e20;">🌿 SugarGreen Platform</th>
+          <th style="background:#ffebee; color:#b71c1c;">Commercial Refined Sugar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Sulfur & Bleaching</strong></td>
+          <td class="highlight-green"><i class="fas fa-check-circle"></i> 100% Zero Sulfur & Bleach</td>
+          <td class="highlight-red"><i class="fas fa-times-circle"></i> Bleached with Sulfur Dioxide (SO2)</td>
+        </tr>
+        <tr>
+          <td><strong>Essential Minerals</strong></td>
+          <td class="highlight-green"><i class="fas fa-check-circle"></i> Rich in Iron, Magnesium & Potassium</td>
+          <td class="highlight-red"><i class="fas fa-times-circle"></i> Stripped of 100% Minerals (Empty Calories)</td>
+        </tr>
+        <tr>
+          <td><strong>Farmer Compensation</strong></td>
+          <td class="highlight-green"><i class="fas fa-check-circle"></i> 80%+ Direct Payout to Cultivators</td>
+          <td class="highlight-red"><i class="fas fa-times-circle"></i> Middlemen Take Up to 70% Margins</td>
+        </tr>
+        <tr>
+          <td><strong>Packaging & Ecology</strong></td>
+          <td class="highlight-green"><i class="fas fa-check-circle"></i> Biodegradable & Carbon-Neutral Goals</td>
+          <td class="highlight-red"><i class="fas fa-times-circle"></i> High Industrial Waste & Single-Use Plastics</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="section about-box" id="about" data-aos="zoom-in">
+  <div class="about-content">
+    <h2>About SugarGreen</h2>
+    <p>
+      SugarGreen is more than a marketplace — it's a green revolution. We connect eco-conscious consumers
+      directly to local sugarcane farmers using digital innovation. With every order, you're helping
+      a sustainable future grow.
+    </p>
+    <div class="about-columns">
+      <div>
+        <h3>🌱 Our Mission</h3>
+        <p>To empower sugarcane farmers by giving them direct access to modern markets and fair pricing.</p>
+      </div>
+      <div>
+        <h3>💡 Our Vision</h3>
+        <p>To become India’s most trusted and sustainable sugarcane platform — rooted in transparency and technology.</p>
+      </div>
+      <div>
+        <h3>🌍 Community Impact</h3>
+        <p>We work hand-in-hand with rural communities to encourage green practices and digital empowerment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section class="section highlight" id="features">
+  <h2 data-aos="fade-up">Why Choose Us?</h2>
+  <div class="features-container">
+    <div class="feature-box" data-aos="fade-right">🌿 <strong>Eco-friendly Organic Farming</strong></div>
+    <div class="feature-box" data-aos="fade-left">📦 <strong>Direct Farm-to-Home Delivery</strong></div>
+    <div class="feature-box" data-aos="fade-right">🔒 <strong>Transparent & Secure Transactions</strong></div>
+    <div class="feature-box" data-aos="fade-left">🤝 <strong>Empowering Rural Farmers Digitally</strong></div>
+  </div>
+</section>
+
+<!-- Customer Reviews & Testimonials Section -->
+<section class="testimonials-section" id="reviews">
+  <div class="section-badge-tag">Trusted By Thousands</div>
+  <h2 class="section-title" data-aos="fade-up">Stories from Farmers & Families</h2>
+  <p class="section-subtitle" data-aos="fade-up">Hear from the healthcare professionals, conscious families, and sugarcane growers who make SugarGreen possible.</p>
+
+  <div class="testimonials-grid">
+    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+      <div>
+        <div class="testi-stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <p class="testi-quote">"Replacing refined white sugar with SugarGreen's organic jaggery and sugarcubes has been a game-changer for my family's metabolic wellness. You can taste the authentic purity!"</p>
+      </div>
+      <div class="testi-author">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="Dr. Anjali" class="testi-avatar" />
+        <div class="testi-author-info">
+          <h4>Dr. Anjali Deshmukh</h4>
+          <p>Ayurvedic Nutritionist, Bangalore</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+      <div>
+        <div class="testi-stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <p class="testi-quote">"As a sugarcane grower in Tumkur, SugarGreen freed us from the exploitation of local middle agents. We receive fair compensation directly in our accounts within 48 hours."</p>
+      </div>
+      <div class="testi-author">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Ramesh Gowda" class="testi-avatar" />
+        <div class="testi-author-info">
+          <h4>Ramesh Gowda</h4>
+          <p>Partner Farmer, Kunigal Region</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+      <div>
+        <div class="testi-stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <p class="testi-quote">"The golden sugarcane syrup and unrefined molasses give our artisanal desserts a rich, natural caramel note that store-bought syrups could never match. Outstanding packaging!"</p>
+      </div>
+      <div class="testi-author">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="Kavya Nair" class="testi-avatar" />
+        <div class="testi-author-info">
+          <h4>Kavya Nair</h4>
+          <p>Artisan Bakery Chef, Mysore</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Frequently Asked Questions Accordion -->
+<section class="faq-section" id="faq">
+  <div class="section-badge-tag">Got Questions?</div>
+  <h2 class="section-title" data-aos="fade-up">Frequently Asked Questions</h2>
+  <p class="section-subtitle" data-aos="fade-up">Everything you need to know about our organic certification, farm payouts, and shipping process.</p>
+
+  <div class="faq-container">
+    <div class="faq-item" data-aos="fade-up">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <span>How is SugarGreen different from supermarket white sugar?</span>
+        <i class="fas fa-chevron-down faq-icon"></i>
+      </div>
+      <div class="faq-answer">
+        <p>Commercial sugar is bleached with toxic sulfur dioxide and stripped of all micro-nutrients through chemical refining. SugarGreen products are unbleached, cold-clarified using natural organic mucilage, and retain active iron, calcium, magnesium, and natural enzymes.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" data-aos="fade-up">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <span>How does SugarGreen ensure fair prices for rural farmers?</span>
+        <i class="fas fa-chevron-down faq-icon"></i>
+      </div>
+      <div class="faq-answer">
+        <p>By connecting farmers directly to consumers through our digital platform, we eliminate commission-hungry brokers. Over 80% of every sale goes directly to the sugarcane grower's bank account, supporting rural livelihood and green farming education.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" data-aos="fade-up">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <span>What is the shelf life and recommended storage for jaggery and syrup?</span>
+        <i class="fas fa-chevron-down faq-icon"></i>
+      </div>
+      <div class="faq-answer">
+        <p>Our traditional jaggery and sugarcubes stay fresh for up to 12 months when stored in a cool, dry, airtight container. Pure sugarcane syrup and molasses should be refrigerated after opening to preserve their delicate floral notes.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" data-aos="fade-up">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <span>Can businesses place bulk or wholesale orders?</span>
+        <i class="fas fa-chevron-down faq-icon"></i>
+      </div>
+      <div class="faq-answer">
+        <p>Yes! We supply cafes, artisanal sweet-makers, wellness centres, and wedding event caterers with custom packaging and wholesale pricing. Contact us at <strong>support@sugargreen.in</strong> or call +91 9113963499 for dedicated B2B quotes.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" data-aos="fade-up">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <span>What are the shipping charges and delivery timelines?</span>
+        <i class="fas fa-chevron-down faq-icon"></i>
+      </div>
+      <div class="faq-answer">
+        <p>Orders above ₹499 enjoy 100% Free Doorstep Delivery. Karnataka deliveries typically arrive within 24 to 48 hours, while all-India deliveries take 3 to 5 business days with live SMS and WhatsApp tracking.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Green Club Newsletter VIP Subscription -->
+<section class="newsletter-section" data-aos="fade-up">
+  <div class="newsletter-box">
+    <h2>Join the Green Club</h2>
+    <p>Subscribe for seasonal harvest notifications, traditional healthy sweetener recipes, and receive an instant <strong>₹100 discount coupon</strong> on your first order.</p>
+    <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+      <input type="email" id="newsletterEmail" placeholder="Enter your email address..." required />
+      <button type="submit"><i class="fas fa-paper-plane"></i> Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<!-- Professional Pre-Footer Directory -->
+<div class="pre-footer">
+  <div class="pre-footer-grid">
+    <div class="footer-col">
+      <h4>🌿 SugarGreen</h4>
+      <p>Pioneering sustainable sugarcane farming, digital empowerment, and unrefined sweet purity directly from Indian soil to your kitchen.</p>
+      <div class="footer-social-icons">
+        <a href="https://instagram.com/fakeprofile" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://youtube.com/fakech" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://x.com/fakehandle" target="_blank" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://wa.me/919113963499" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul class="footer-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="about.html">About SugarGreen</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="#products">Farm Products</a></li>
+        <li><a href="#process">Our 4-Step Process</a></li>
+        <li><a href="#reviews">Customer Stories</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Portals & Account</h4>
+      <ul class="footer-links">
+        <li><a href="consumer.html">Consumer Store</a></li>
+        <li><a href="seller.html">Farmer Registration</a></li>
+        <li><a href="register.html">User Sign Up</a></li>
+        <li><a href="login.html">Member Login</a></li>
+        <li><a href="admin.html">Administrator Portal</a></li>
+        <li><a href="transaction.html">Order & Transaction History</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Farm & Corporate Office</h4>
+      <p>📍 21 Street, Johnson Industrial Area, Kunigal, Tumkur District, Karnataka, India - 572130</p>
+      <p>🕒 Mon - Sat: 8:00 AM - 7:00 PM</p>
+      <p>📞 Phone: +91 9113963499 / +91 789164556</p>
+      <p>📧 Email: support@sugargreen.in</p>
+    </div>
+  </div>
+
+  <div class="trust-badges-strip">
+    <span><i class="fas fa-lock"></i> 256-Bit SSL Encrypted Checkout</span>
+    <span><i class="fas fa-award"></i> FSSAI Compliant Food Safety</span>
+    <span><i class="fas fa-leaf"></i> 100% Organic Certified</span>
+    <span><i class="fas fa-handshake"></i> Fair Trade Direct Farmer Payout</span>
+  </div>
+</div>
+
+<!-- Existing Footer (Preserved 100% Intact) -->
+<footer>
+  📞 +91 9113963499 | ✉️ support@sugargreen.in<br/>
+  &copy; 2025 SugarGreen. All rights reserved.
+</footer>
+
+<!-- Floating WhatsApp Support Button -->
+<a href="https://wa.me/919113963499?text=Hello%20SugarGreen%2C%20I%20would%20like%20to%20know%20more%20about%20your%20organic%20sugarcane%20products!" class="floating-whatsapp" target="_blank" title="Chat with us on WhatsApp" aria-label="WhatsApp Support">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Floating Back To Top Button -->
+<button class="back-to-top" id="backToTop" onclick="scrollToTop()" title="Back to top" aria-label="Back to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- Interactive Toast Message -->
+<div class="toast-msg" id="toastMsg">
+  <i class="fas fa-check-circle"></i> <span id="toastText">Item added to cart!</span>
+</div>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 1000 });
+
+  // Falling leaves generation
+  const leafContainer = document.querySelector(".falling-leaves");
+  for (let i = 0; i < 25; i++) {
+    const leaf = document.createElement("div");
+    leaf.className = "leaf";
+    leaf.style.left = Math.random() * 100 + "vw";
+    leaf.style.animationDuration = (5 + Math.random() * 5) + "s";
+    leaf.style.animationDelay = Math.random() * 5 + "s";
+    leafContainer.appendChild(leaf);
+  }
+
+  // Mobile menu toggle
+  const mobileToggle = document.getElementById("mobileToggle");
+  const navWrapper = document.getElementById("navWrapper");
+  if (mobileToggle && navWrapper) {
+    mobileToggle.addEventListener("click", () => {
+      navWrapper.classList.toggle("open");
+    });
+  }
+
+  // FAQ Accordion
+  function toggleFaq(element) {
+    const item = element.parentElement;
+    const answer = item.querySelector(".faq-answer");
+    const isOpen = item.classList.contains("active");
+
+    // Close all other FAQs
+    document.querySelectorAll(".faq-item").forEach(other => {
+      if (other !== item) {
+        other.classList.remove("active");
+        other.querySelector(".faq-answer").style.maxHeight = null;
+      }
+    });
+
+    if (!isOpen) {
+      item.classList.add("active");
+      answer.style.maxHeight = answer.scrollHeight + 30 + "px";
+    } else {
+      item.classList.remove("active");
+      answer.style.maxHeight = null;
+    }
+  }
+
+  // Product Filter Tabs
+  function filterProducts(category, tabBtn) {
+    document.querySelectorAll(".filter-tab").forEach(t => t.classList.remove("active"));
+    tabBtn.classList.add("active");
+
+    const cards = document.querySelectorAll(".pro-product-card");
+    cards.forEach(card => {
+      const cardCat = card.getAttribute("data-category");
+      if (category === "all" || cardCat === category) {
+        card.style.display = "flex";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  }
+
+  // Toast Notification System
+  function showToast(message) {
+    const toast = document.getElementById("toastMsg");
+    const toastText = document.getElementById("toastText");
+    toastText.innerText = message;
+    toast.classList.add("show");
+    setTimeout(() => {
+      toast.classList.remove("show");
+    }, 3200);
+  }
+
+  function addToCart(productName) {
+    showToast(`🛒 "${productName}" added to your bag!`);
+  }
+
+  function handleNewsletter(e) {
+    e.preventDefault();
+    const email = document.getElementById("newsletterEmail").value;
+    if (email) {
+      showToast(`🎉 Thank you for subscribing! Your ₹100 discount coupon code is "GREENSWEET100".`);
+      document.getElementById("newsletterEmail").value = "";
+    }
+  }
+
+  // Back to Top Button
+  const backToTopBtn = document.getElementById("backToTop");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 400) {
+      backToTopBtn.classList.add("show");
+    } else {
+      backToTopBtn.classList.remove("show");
+    }
+  });
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+</script>
+
+</body>
+</html>

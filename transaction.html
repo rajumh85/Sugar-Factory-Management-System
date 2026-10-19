@@ -1,0 +1,113 @@
+<?php
+// You can remove this PHP logic since we're not using `?success=1` anymore
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Transaction | SugarGreen</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0fff0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .transaction-box {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 500px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    h2 {
+      color: #2e7d32;
+    }
+
+    input, select, textarea {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background-color: #388e3c;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    button:hover {
+      background-color: #2e7d32;
+    }
+
+    .postal-details, .bank-details, .upi-details {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="transaction-box">
+  <h2>Choose Payment Receiving Method</h2>
+  <form method="POST" action="store_transaction.php">
+    <input type="hidden" name="seller_id" value="1">
+
+    <label for="method">Receive Money By:</label>
+    <select id="method" name="method" onchange="toggleFields()" required>
+      <option value="">-- Select Method --</option>
+      <option value="Postal">Postal</option>
+      <option value="Bank">Bank</option>
+      <option value="UPI">UPI</option>
+    </select>
+
+    <!-- Postal fields -->
+    <div class="postal-details" id="postalFields">
+      <textarea name="postal_address" placeholder="Full Address"></textarea><br>
+      <input type="text" name="postal_phone" placeholder="Phone Number"><br>
+      <input type="text" name="postal_code" placeholder="Postal Code"><br>
+      <textarea name="postal_notes" placeholder="Delivery Notes (optional)"></textarea>
+    </div>
+
+    <!-- Bank fields -->
+    <div class="bank-details" id="bankFields">
+      <input type="text" name="bank_name" placeholder="Bank Name"><br>
+      <input type="text" name="account_number" placeholder="Account Number"><br>
+      <input type="text" name="ifsc" placeholder="IFSC Code"><br>
+    </div>
+
+    <!-- UPI fields -->
+    <div class="upi-details" id="upiFields">
+      <input type="text" name="upi_id" placeholder="UPI ID"><br>
+      <input type="text" name="upi_app" placeholder="UPI App (PhonePe, GPay, etc)"><br>
+    </div>
+
+    <button type="submit">Submit Transaction</button>
+  </form>
+</div>
+
+<script>
+  function toggleFields() {
+    const method = document.getElementById("method").value;
+    document.getElementById("postalFields").style.display = (method === "Postal") ? "block" : "none";
+    document.getElementById("bankFields").style.display = (method === "Bank") ? "block" : "none";
+    document.getElementById("upiFields").style.display = (method === "UPI") ? "block" : "none";
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SugarGreen | Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: #f9fff9;
+      color: #2e7d32;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: #a5d6a7;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      position: relative;
+      z-index: 2;
+    }
+
+    .logo {
+      font-family: 'Pacifico', cursive;
+      font-size: 26px;
+      color: #2e7d32;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #2e7d32;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #1b5e20;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 20px 100px;
+      background-color: #f9fff9;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-grid {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .hero-image img {
+      width: 300px;
+      height: 380px;
+      object-fit: cover;
+      border-radius: 16px;
+      border: 2px solid #66bb6a;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    }
+
+    .hero-text {
+      width: 420px;
+      background-color: #ffffff;
+      border: 2px solid #66bb6a;
+      border-radius: 16px;
+      padding: 60px 45px;
+      box-shadow: 0 8px 26px rgba(0, 128, 0, 0.12);
+      text-align: center;
+    }
+
+    .hero-text h1 {
+      font-size: 26px;
+      margin-bottom: 20px;
+      color: #2e7d32;
+    }
+
+    .hero-text p {
+      font-size: 16px;
+      color: #2e7d32;
+      margin-bottom: 25px;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .btn {
+      background-color: #388e3c;
+      color: white;
+      padding: 12px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn:hover {
+      background-color: #2e7d32;
+      transform: scale(1.03);
+    }
+
+    .section {
+      padding: 80px 20px;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .about-box {
+      background-color: #f1fdf1;
+      border: 2px solid #a5d6a7;
+      margin: 60px auto;
+      border-radius: 14px;
+      max-width: 1000px;
+      padding: 50px 40px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+    }
+
+    .about-box h2 {
+      font-size: 34px;
+      margin-bottom: 20px;
+    }
+
+    .about-box p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      max-width: 800px;
+      margin-inline: auto;
+    }
+
+    .about-columns {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      text-align: left;
+      margin-top: 20px;
+    }
+
+    .about-columns div {
+      padding: 10px 20px;
+      border-left: 5px solid #66bb6a;
+      background: #ffffff;
+      border-radius: 8px;
+    }
+
+    .about-columns h3 {
+      margin-bottom: 8px;
+      font-size: 20px;
+      color: #2e7d32;
+    }
+
+    .features-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .feature-box {
+      background-color: #f1fdf1;
+      border-left: 6px solid #66bb6a;
+      padding: 20px 30px;
+      width: 90%;
+      max-width: 600px;
+      font-size: 18px;
+      color: #2e7d32;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .feature-box:hover {
+      transform: translateY(-5px);
+    }
+
+    footer {
+      background-color: #a5d6a7;
+      color: #1b5e20;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 14px;
+      position: relative;
+      z-index: 2;
+    }
+
+    @media (max-width: 768px) {
+      .about-columns {
+        flex-direction: column;
+      }
+    }
+
+    /* Leaves Background */
+    .falling-leaves {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .leaf {
+      position: absolute;
+      top: -60px;
+      width: 40px;
+      height: 40px;
+      background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6Kmm8Z3QfkD2kCERdedXxUjS81vV4dNJUTw&s'); /* Place leaf.png in same folder */
+      background-size: contain;
+      background-repeat: no-repeat;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-60px) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0.7;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Falling Leaves -->
+<div class="falling-leaves"></div>
+
+<!-- Header -->
+<header>
+  <div class="logo">🌿 SugarGreen</div>
+  <nav>
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="login.html">Login</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero" id="hero">
+  <div class="hero-grid">
+    <div class="hero-image" data-aos="fade-right">
+      <img src="sugarcane1.jpeg" alt="left image" />
+    </div>
+    <div class="hero-text" data-aos="zoom-in">
+      <h1>Nature’s Sweetness, Delivered</h1>
+      <p>Empowering communities through sustainable sugarcane farming and digital innovation.</p>
+      <div class="btn-group">
+        <a href="register.html" class="btn">Register</a>
+        <a href="login.html" class="btn">Login</a>
+      </div>
+    </div>
+    <div class="hero-image" data-aos="fade-left">
+      <img src="sugarcane2.jpeg" alt="right image" />
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="section about-box" id="about" data-aos="zoom-in">
+  <div class="about-content">
+    <h2>About SugarGreen</h2>
+    <p>
+      SugarGreen is more than a marketplace — it's a green revolution. We connect eco-conscious consumers
+      directly to local sugarcane farmers using digital innovation. With every order, you're helping
+      a sustainable future grow.
+    </p>
+    <div class="about-columns">
+      <div>
+        <h3>🌱 Our Mission</h3>
+        <p>To empower sugarcane farmers by giving them direct access to modern markets and fair pricing.</p>
+      </div>
+      <div>
+        <h3>💡 Our Vision</h3>
+        <p>To become India’s most trusted and sustainable sugarcane platform — rooted in transparency and technology.</p>
+      </div>
+      <div>
+        <h3>🌍 Community Impact</h3>
+        <p>We work hand-in-hand with rural communities to encourage green practices and digital empowerment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section class="section highlight" id="features">
+  <h2 data-aos="fade-up">Why Choose Us?</h2>
+  <div class="features-container">
+    <div class="feature-box" data-aos="fade-right">🌿 <strong>Eco-friendly Organic Farming</strong></div>
+    <div class="feature-box" data-aos="fade-left">📦 <strong>Direct Farm-to-Home Delivery</strong></div>
+    <div class="feature-box" data-aos="fade-right">🔒 <strong>Transparent & Secure Transactions</strong></div>
+    <div class="feature-box" data-aos="fade-left">🤝 <strong>Empowering Rural Farmers Digitally</strong></div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  📞 +91 9113963499 | ✉️ support@sugargreen.in<br/>
+  &copy; 2025 SugarGreen. All rights reserved.
+</footer>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 1000 });
+
+  // Falling leaves generation
+  const leafContainer = document.querySelector(".falling-leaves");
+  for (let i = 0; i < 25; i++) {
+    const leaf = document.createElement("div");
+    leaf.className = "leaf";
+    leaf.style.left = Math.random() * 100 + "vw";
+    leaf.style.animationDuration = (5 + Math.random() * 5) + "s";
+    leaf.style.animationDelay = Math.random() * 5 + "s";
+    leafContainer.appendChild(leaf);
+  }
+</script>
+
+</body>
+</html>

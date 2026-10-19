@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login | SugarGreen</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #eaf7ea;
+    }
+
+    header {
+      background-color: #a5d6a7;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-family: 'Pacifico', cursive;
+      font-size: 24px;
+      color: #2e7d32;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: #2e7d32;
+      font-weight: bold;
+    }
+
+    .nav-links li a:hover {
+      text-decoration: underline;
+    }
+
+    .login-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80vh;
+    }
+
+    .login-box {
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 128, 0, 0.2);
+      width: 320px;
+      text-align: center;
+    }
+
+    .login-box h2 {
+      color: #2e7d32;
+      margin-bottom: 20px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .role-selection {
+      margin: 15px 0;
+      text-align: left;
+    }
+
+    .role-selection label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .role-option {
+      margin-bottom: 10px;
+    }
+
+    .login-box button {
+      background-color: #388e3c;
+      color: white;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 15px;
+      width: 100%;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .login-box button:hover {
+      background-color: #2e7d32;
+      transform: scale(1.03);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">🌿 SugarGreen</div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="register.html">Register</a></li>
+  </ul>
+</header>
+
+<div class="login-container">
+  <div class="login-box">
+    <h2>Login</h2>
+    <form id="fakeLoginForm">
+      <input type="text" name="username" placeholder="Username or Email" required />
+      <input type="password" name="password" placeholder="Password" required />
+
+      <div class="role-selection">
+        <label>Select Role:</label>
+        <div class="role-option">
+          <input type="radio" name="role" value="admin" required> Admin
+        </div>
+        <div class="role-option">
+          <input type="radio" name="role" value="consumer"> Consumer
+        </div>
+        <div class="role-option">
+          <input type="radio" name="role" value="seller"> Seller
+        </div>
+      </div>
+
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  document.getElementById("fakeLoginForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent actual submission
+
+    const selectedRole = document.querySelector('input[name="role"]:checked').value;
+
+    // Redirect to corresponding dashboard
+    switch (selectedRole) {
+      case 'admin':
+        window.location.href = 'admin.html';
+        break;
+      case 'consumer':
+        window.location.href = 'consumer.html';
+        break;
+      case 'seller':
+        window.location.href = 'seller.html';
+        break;
+      default:
+        alert("Please select a valid role.");
+    }
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sugar Cubes - Buy</title>
+  <style>
+    body { font-family: Arial; background-color: #f0fdf4; padding: 40px; }
+    .product-page { max-width: 500px; margin: auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    h2 { color: #2e7d32; }
+    input[type=number] { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 6px; }
+    .total { font-weight: bold; color: #388e3c; }
+    button { background: #388e3c; color: white; padding: 12px 20px; border: none; border-radius: 8px; font-size: 16px; cursor: pointer; width: 100%; }
+    button:hover { background: #2e7d32; }
+  </style>
+</head>
+<body>
+  <div class="product-page">
+    <h2>Sugar Cubes - ₹50/kg</h2>
+    <label>Enter Quantity (kg):</label>
+    <input type="number" id="quantity" min="1" value="1" onchange="calculateTotal()" />
+    <p class="total">Total: ₹<span id="total">50</span></p>
+    <button onclick="checkout()">Checkout</button>
+  </div>
+  <script>
+    const pricePerKg = 50;
+    function calculateTotal() {
+      const qty = document.getElementById("quantity").value;
+      document.getElementById("total").innerText = qty * pricePerKg;
+    }
+    function checkout() { window.location.href = 'payment.html'; }
+  </script>
+</body>
+</html>
+
